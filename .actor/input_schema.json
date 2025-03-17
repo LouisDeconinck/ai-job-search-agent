@@ -1,0 +1,16 @@
+{
+    "title": "Job Search Agent Input",
+    "description": "Configure your job search details.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "linkedin_profile_url": {
+            "title": "LinkedIn Profile URL",
+            "description": "Enter the LinkedIn profile URL of the candidate you're searching for.",
+            "type": "string",
+            "editor": "textfield",
+            "prefill": "https://www.linkedin.com/in/louisdeconinck/"
+        }
+    },
+    "required": ["linkedin_profile_url"]
+}

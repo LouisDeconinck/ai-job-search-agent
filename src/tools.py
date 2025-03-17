@@ -236,7 +236,7 @@ async def search_linkedin_jobs(
     
     try:
         # Execute the actor and get the run info
-        run = client.actor("worldunboxer/rapid-linkedin-scraper").call(run_input=run_input, memory_mbytes=2048)
+        run = client.actor("worldunboxer/rapid-linkedin-scraper").call(run_input=run_input, memory_mbytes=1024)
         
         # Get the dataset items
         all_items = client.dataset(run["defaultDatasetId"]).list_items().items

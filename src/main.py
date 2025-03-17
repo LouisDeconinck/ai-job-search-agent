@@ -66,9 +66,9 @@ Based on your profile analysis, here are the most relevant job titles for your b
 
 ## Selected Job Opportunities
 
-{chr(10).join(f'''### {job.get('title', 'N/A')} at {job.get('company', 'N/A')}
+{chr(10).join(f'''### {job.get('job_title', 'N/A')} at {job.get('company_name', 'N/A')}
 **Location**: {job.get('location', 'N/A')}
-**Job ID**: {job.get('job_id', 'N/A')}
+**Job ID**: [{job.get('job_id', 'N/A')}]({job.get('job_url', '#')})
 
 #### Why This Role?
 {job.get('reason', 'N/A')}

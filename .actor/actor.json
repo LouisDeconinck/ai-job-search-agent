@@ -1,12 +1,56 @@
 {
 	"actorSpecification": 1,
 	"name": "ai-job-search-agent",
-	"title": "Empty Python project",
-	"description": "Empty project in Python.",
+	"title": "AI Job Search Agent",
+	"description": "AI Job Search Agent",
 	"version": "0.0",
 	"buildTag": "latest",
 	"meta": {
 		"templateId": "python-empty"
 	},
-	"dockerfile": "./Dockerfile"
+	"dockerfile": "./Dockerfile",
+	"storages": {
+		"dataset": {
+			"actorSpecification": 1,
+			"views": {
+				"overview": {
+					"title": "Overview",
+					"transformation": {
+						"fields": [
+							"linkedin_profile_info",
+							"selected_job_titles",
+							"selected_jobs",
+							"summary",
+							"markdown_report"
+						]
+					},
+					"display": {
+						"component": "table",
+						"properties": {
+							"linkedin_profile_info": {
+								"label": "LinkedIn Profile Info",
+								"format": "object"
+							},
+							"selected_job_titles": {
+								"label": "Selected Job Titles",
+								"format": "array"
+							},
+							"selected_jobs": {
+								"label": "Selected Jobs",
+								"format": "array"
+							},
+							"summary": {
+								"label": "Summary",
+								"format": "text"
+							},
+							"markdown_report": {
+								"label": "Markdown Report",
+								"format": "text"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
